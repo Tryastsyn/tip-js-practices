@@ -1,9 +1,9 @@
 "use strict";
 
-const totalTasks = 5;
-const completedTasks = 2;
-const dailyLimit = "1001";
-// Проверка totalTasks и completedTasks
+const totalTasks = 12;
+const completedTasks = 5;
+const dailyLimit = 3;
+//7 пункт
 if (typeof totalTasks !== "number" || typeof completedTasks !== "number") {
     console.log("Ошибка: вместо числа передана строка.");
 } else if (Number.isNaN(totalTasks) || Number.isNaN(completedTasks)) {
@@ -16,7 +16,7 @@ if (typeof totalTasks !== "number" || typeof completedTasks !== "number") {
     console.log("Ошибка: превышена верхняя граница.");
 } else if (completedTasks > totalTasks) {
     console.log("Ошибка: некорректное число выполненных задач.");
-// Проверка dailyLimit
+
 } else if (typeof dailyLimit !== "number") {
     console.log("Ошибка: дневная норма задана строкой.");
 } else if (Number.isNaN(dailyLimit)) {

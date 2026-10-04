@@ -1,10 +1,9 @@
 "use strict";
 
-const totalTasks = NaN;
-const completedTasks = 0;
+const totalTasks = 5;
+const completedTasks = 6;
 
 // Здесь разместите своё решение.
-
 if (typeof totalTasks !== "number" || typeof completedTasks !== "number") {
     console.log("Ошибка: вместо числа передана строка.");
 } else if (Number.isNaN(totalTasks) || Number.isNaN(completedTasks)) {
