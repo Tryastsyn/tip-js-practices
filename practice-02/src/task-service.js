@@ -4,8 +4,19 @@
 // console.log(), prompt(), document и чтение внешнего состояния здесь не нужны.
 
 export function createTask(id, title, priority = "medium") {
-  // TODO: проверить поля и вернуть результат создания задачи.
-  throw new Error("Не реализовано: createTask");
+  if (!Number.isSafeInteger(id) || id <= 0) {
+    return { ok: false, error: "id должен быть положительным целым числом" };
+  }
+
+  // 1. Если title не строка, верни { ok: false, error: "..." }.
+  // 2. const cleanTitle = title.trim();
+  // 3. Если длина cleanTitle меньше 1 или больше 100, верни ошибку.
+  // 4. Если priority не "low", "medium" и не "high", верни ошибку.
+
+  return {
+    ok: true,
+    task: { id, title: cleanTitle, completed: false, priority },
+  };
 }
 
 export function findTaskById(tasks, id) {

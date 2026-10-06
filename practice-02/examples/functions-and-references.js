@@ -12,7 +12,7 @@ console.log("Эксперимент 1. Параметры и возвращае�
 console.log("Эксперимент 2. Тело стрелочной функции"); {
     // Здесь намеренно пропущен return. Исправление входит в задание 1.
     const square = (value) => {
-        value * value;
+        return value * value;
     };
     console.log(square(4));
 }
@@ -28,7 +28,7 @@ console.log("Эксперимент 3. Два имени одного объек
 console.log("Эксперимент 4. Копия массива с объектом"); {
     const products = [{ name: "Папка", stock: 3 }];
     const copy = [...products];
-    copy[0].stock = 7;
+    copy[0].stock = 7;  
     console.log(products[0].stock);
     console.log(products === copy);
     console.log(products[0] === copy[0]);
